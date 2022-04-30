@@ -38,6 +38,7 @@ img {
 /*- ----------------- */
 /*- GLOBAL COMPONENTS */
 /*- ----------------- */
+
 .container {
   max-width: 35rem;
   margin-inline: auto;
@@ -127,6 +128,7 @@ header .navigation ul li a {
   border: none;
   padding: 1rem;
   border-radius: 5px;
+  cursor: pointer;
 
   background-color: var(--Bright-Blue);
   color: white;
@@ -299,6 +301,8 @@ main .cta {
 }
 
 .cta .container form input[type="submit"] {
+  cursor: pointer;
+
   display: block;
   width: 90%;
   border: none;

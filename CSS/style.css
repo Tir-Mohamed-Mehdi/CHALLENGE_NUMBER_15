@@ -14,6 +14,7 @@ html {
   --Very-Dark-Blue: #070439;
   --Desaturated-Blue: #585989;
   --Bright-Blue: #3065f8;
+  --Bright-Blue-shadow: #3065f866;
   --Moderate-Cyan: #3c9f8f;
   --Light-Grayish-Blue: #f6f6fe;
   --Light-Gray: #bfbfbf;
@@ -26,4 +27,484 @@ html {
 }
 
 body {
+  font-family: var(--font-family-body);
+  color: var(--Very-Dark-Blue);
+}
+
+img {
+  width: 100%;
+}
+
+/*- ----------------- */
+/*- GLOBAL COMPONENTS */
+/*- ----------------- */
+.container {
+  max-width: 35rem;
+  margin-inline: auto;
+}
+
+.title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: var(--Very-Dark-Blue);
+  font-family: var(--font-family-heading);
+  margin-bottom: 2rem;
+}
+.title + p {
+  font-size: 1.8rem;
+  max-width: 30ch;
+  margin-inline: auto;
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 3rem;
+}
+
+/*- ----------------- */
+
+/** this is the navigation bar */
+
+header {
+  margin-bottom: 10rem;
+}
+
+header .container {
+  margin-inline: auto;
+}
+
+header .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 3rem;
+}
+
+header .container .navigation img {
+  max-width: clamp(8rem, 20%, 13rem);
+}
+
+header .navigation ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+header .navigation ul li a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+/** this is the hero section */
+
+.hero {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.hero .container {
+  margin-inline: auto;
+}
+
+.hero .container .hero__text--box form input[type="email"] {
+  display: block;
+  width: 90%;
+  padding: 1rem;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--Very-Dark-Blue);
+  margin-bottom: 1.5rem;
+  margin-inline: auto;
+}
+
+.hero .container .hero__text--box form input[type="email"]::placeholder {
+  color: var(--Light-Gray);
+}
+
+.hero .container .hero__text--box form input[type="submit"] {
+  display: block;
+  width: 90%;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+
+  background-color: var(--Bright-Blue);
+  color: white;
+  font-family: var(--font-family-heading);
+  box-shadow: 0 1px 5px var(--Bright-Blue-shadow);
+  margin-inline: auto;
+}
+
+.hero .container img {
+  max-width: 100%;
+  margin-bottom: 4rem;
+}
+
+/** this is testimonial section */
+
+.testimonial {
+  background-color: var(--Light-Grayish-Blue);
+  position: relative;
+  isolation: isolate;
+}
+
+main > .testimonial::before {
+  content: "";
+  background-image: url(/images/bg-curve-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  left: 0;
+  top: -5rem;
+  z-index: -1;
+}
+
+.testimonial .container {
+  margin-inline: auto;
+  padding: 5rem 0;
+}
+
+.testimonial .container > img {
+  margin-bottom: 9rem;
+}
+
+.testimonial .container .testimonial__text--box h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: var(--font-weight-700);
+}
+
+.testimonial .container .testimonial__text--box :is(h2 + p, h2 + P + P) {
+  font-size: 1.5rem;
+  max-width: 55ch;
+  margin-inline: auto;
+  color: var(--Desaturated-Blue);
+  margin-bottom: 2rem;
+}
+
+.testimonial .container .testimonial__text--box > div:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1.5px solid var(--Moderate-Cyan);
+  width: max-content;
+  padding-bottom: 0.5rem;
+  margin: 4rem auto 4rem auto;
+}
+
+.testimonial .container .testimonial__text--box a {
+  display: inline-block;
+  color: var(--Moderate-Cyan);
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.testimonial .container .testimonial__text--box div:first-of-type img {
+  width: 2rem;
+}
+
+.testimonial .container .testimonial__text--box div.testimonial {
+  background-color: white;
+  padding: 3rem;
+  max-width: 90%;
+  margin-inline: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial .container .testimonial__text--box div.testimonial img {
+  width: 1.7rem;
+}
+
+.testimonial .container .testimonial__text--box div.testimonial > p {
+  font-size: 1.1rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial
+  .container
+  .testimonial__text--box
+  div.testimonial
+  > .testimonial__name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial
+  .container
+  .testimonial__text--box
+  div.testimonial
+  > .testimonial__name
+  img {
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.testimonial
+  .container
+  .testimonial__text--box
+  div.testimonial
+  > .testimonial__name
+  p {
+  font-weight: var(--font-weight-700);
+  letter-spacing: 1px;
+}
+
+.testimonial
+  .container
+  .testimonial__text--box
+  div.testimonial
+  > .testimonial__name
+  span {
+  font-size: 0.9rem;
+}
+
+/** this is the CTA section */
+
+main .cta {
+  background-color: var(--Desaturated-Blue);
+  text-align: center;
+  padding: 6rem 0;
+}
+.cta .container .cta__text :is(h2, p) {
+  color: white;
+}
+
+.cta .container .cta__text h2 {
+  font-size: 2rem;
+}
+
+.cta .container .cta__text p {
+  font-size: 1.6rem;
+}
+
+.cta .container form input[type="email"] {
+  display: block;
+  width: 90%;
+  padding: 1rem;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  margin-inline: auto;
+  border: none;
+}
+
+.cta .container form input[type="email"]::placeholder {
+  color: var(--Light-Gray);
+}
+
+.cta .container form input[type="submit"] {
+  display: block;
+  width: 90%;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+
+  /* BUG: /*! this is a padding or a 
+  ! margin I don't know where it comes from */
+
+  background-color: var(--Bright-Blue);
+  color: white;
+  font-family: var(--font-family-heading);
+  box-shadow: 0 1px 5px var(--Bright-Blue-shadow);
+  margin-inline: auto;
+}
+
+/** this is the footer section */
+
+footer {
+  padding: 8rem 0 3rem;
+  background-color: var(--Very-Dark-Blue);
+  color: white;
+}
+
+footer .container {
+  max-width: 30rem;
+}
+
+footer .container img {
+  fill: white;
+  width: clamp(20rem, 40%, 50rem);
+}
+
+footer .container div {
+  margin: 3rem 0;
+}
+
+footer .container div:first-of-type p {
+  margin-left: 3rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+footer .container div:first-of-type p:first-child::before {
+  content: url(/images/icon-phone.svg);
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: -0.4rem;
+  left: -3rem;
+  transform: scale(0.7);
+}
+
+footer .container div:first-of-type p:last-child::before {
+  content: url(/images/icon-email.svg);
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: -0.2rem;
+  left: -3rem;
+  transform: scale(0.7);
+}
+
+footer .container div:nth-of-type(2) ul {
+  list-style: none;
+}
+
+footer .container div:nth-of-type(2) ul li {
+  margin-bottom: 1.4rem;
+}
+
+footer .container div:nth-of-type(3) ul {
+  list-style: none;
+}
+
+footer .container div:nth-of-type(3) ul li {
+  margin-bottom: 1.4rem;
+}
+
+footer .container div:nth-of-type(4) {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+footer .container div:nth-of-type(4) a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  padding: 1.5rem;
+  color: white;
+  border: 1px solid white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+/*! ----------------- */
+/*! ----------------- */
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 100rem;
+    padding: 0 2rem;
+  }
+  /** hero section */
+  .hero .container {
+    display: flex;
+    text-align: start;
+  }
+
+  .hero .container img {
+    max-width: 40%;
+    order: 2;
+  }
+  .hero .container .hero__text--box h1 {
+    font-size: 4rem;
+  }
+  .hero .container .hero__text--box p {
+    margin: auto 0 3rem;
+    max-width: 54ch;
+  }
+  .hero .container .hero__text--box form {
+    display: flex;
+    gap: 2rem;
+    max-width: 70%;
+  }
+  .hero .container .hero__text--box form input[type="email"] {
+    padding: 1rem;
+    flex-basis: 80%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+  .hero .container .hero__text--box form input[type="submit"] {
+    flex-basis: 35%;
+    padding: 1rem 4rem;
+  }
+  /**testimonial section */
+  .testimonial .container {
+    display: flex;
+    text-align: start;
+  }
+  .testimonial .container img {
+    max-width: 40%;
+    order: 2;
+  }
+
+  .testimonial .container .testimonial__text--box h2 {
+    text-align: start;
+  }
+  .testimonial .container .testimonial__text--box :is(h2 + p, h2 + P + P) {
+    margin: 2rem 0;
+  }
+  .testimonial .container .testimonial__text--box > div:first-of-type {
+    text-align: start;
+    margin: 3rem 0;
+  }
+  .testimonial .container .testimonial__text--box div.testimonial {
+    max-width: 60%;
+    margin: 4rem 0;
+  }
+  /** CTA section */
+  .cta .container {
+    display: flex;
+    text-align: start;
+    justify-content: space-between;
+  }
+  .cta .cta__text {
+    flex-basis: 40%;
+  }
+  .cta .container .cta__text p {
+    max-width: 50ch;
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  .cta form {
+    flex-basis: 40%;
+  }
+  .cta .container form input[type="email"] {
+    width: 100%;
+  }
+  .cta .container form input[type="submit"] {
+    max-width: 40%;
+    margin: 0;
+  }
+  /** footer section */
+
+  footer .container {
+    max-width: 100rem;
+    display: grid;
+    grid-template-columns: repeat(4, fit-content);
+    align-items: flex-start;
+    justify-content: flex-start;
+    column-gap: 15rem;
+    font-size: 1.3rem;
+  }
+  footer .container img {
+    max-width: 10rem;
+    grid-column: 1 / span 4;
+  }
+  footer .container > div:last-child {
+    justify-content: flex-start;
+  }
 }
